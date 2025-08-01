@@ -1,0 +1,78 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+.body {
+    background: url("../bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;   
+    padding-top: 40px;        
+    position: relative;
+}
+
+/* Score Displays */
+#scoreBox {
+    position: absolute;
+    top: 10px;
+    right: 200px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #000;
+}
+
+#hiscoreBox {
+    position: absolute;
+    top: 55px;
+    right: 200px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Game Board */
+#board {
+    background: linear-gradient(rgb(144, 203, 144), rgb(240, 240, 143));
+    width: 90vmin;
+    height: 92vmin;
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+}
+
+/* Snake Head */
+.head {
+    background: radial-gradient(circle at center, yellow, red);
+    border: 2px solid black;
+    transform: scale(1.1);
+    border-radius: 50%;
+}
+
+/* Snake Body */
+.snake {
+    background-color: purple;
+    border: 0.25vmin solid white;
+    border-radius: 12px;
+}
+
+/* Food */
+.food {
+    background: radial-gradient(circle at center, orange, red);
+    border: 0.2vmin solid black;
+    border-radius: 50%;
+}
